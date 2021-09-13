@@ -12,7 +12,7 @@ import Help from './pages/home/HelpPage';
 function App() {
     return <Layout>
       <Switch>
-        <Route path='/' exact>
+        <Route path='/on-the-move'>
           <LandingPage/>
         </Route>
         <Route path='/Login'>

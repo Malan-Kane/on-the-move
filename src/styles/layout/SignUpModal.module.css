@@ -1,0 +1,14 @@
+.card{
+    text-align: center;
+    color: black;
+    background-image: linear-gradient( blue,red);
+}
+
+.card h4 a{
+    text-decoration: none;
+}
+
+.card text{
+    text-decoration: none;
+}
+
