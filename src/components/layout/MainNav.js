@@ -1,13 +1,13 @@
 import {Link} from 'react-router-dom';
 import React from 'react';
+
 import {Icon} from '@iconify/react';
 import Styling from '../../styles/layout/MainNav.module.css';
 import Logo from '../logo/otm_logo.svg';
 import {Navbar, Nav} from 'react-bootstrap';
-import LandingPage from '../../pages/home/LandingPage';
 import SignUpModal from './SignInModal';
 
-function MainNav(props){
+function MainNav(){
     const [modalShow, setModalShow] = React.useState(false);
 
 
@@ -21,16 +21,17 @@ function MainNav(props){
                         </Link>
                     </Navbar.Brand>
                     <Nav className={Styling.nav}>
-                        <Nav.Link><Link to='/Company'>Company</Link></Nav.Link>
-                        <Nav.Link><Link to='/Services'>Services</Link></Nav.Link>
-                        <Nav.Link><Link to='/Help'>Help</Link></Nav.Link>
+                        <Nav.Link><Link to='/company'>Company</Link></Nav.Link>
+                        <Nav.Link><Link to='/services'>Services</Link></Nav.Link>
+                        <Nav.Link><Link to='/help'>Help</Link></Nav.Link>
                         <Nav.Link>
-                            <Icon icon="ic:round-login" />
-                            <Link to='/Login'>Login</Link>
+                            <Link to='/login'>
+                                <Icon icon="ic:round-login" />Login
+                            </Link>
                         </Nav.Link>
                         <Nav.Link>
-                            <button className={Styling.button} onClick={() => setModalShow(true)}>
-                                Sign in</button>
+                            <Link to='#' className={Styling.button} onClick={() => setModalShow(true)}>
+                                Sign Up</Link>
                         </Nav.Link>
                     </Nav>
                 </div>

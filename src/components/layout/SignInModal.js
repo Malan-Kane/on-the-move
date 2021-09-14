@@ -14,9 +14,9 @@ function SignUpModal(props){
             <Modal.Body>
                 <Row>
                     <Col>
-                        <Link>
-                            <Card className="text-center">
-                            <Card.Body className={Styling.card}>
+                        <Link to='/signup' className={Styling.card} onClick={props.onHide}>
+                            <Card>
+                            <Card.Body>
                                 <Icon icon="bi:person-fill" width='72'/>
                                 <h4>Client</h4>
                                 <Card.Text>
@@ -27,8 +27,8 @@ function SignUpModal(props){
                         </Link>
                     </Col>
                     <Col>
-                        <Link>
-                            <Card className={Styling.card}>
+                        <Link to='/signup-driver' className={Styling.card} onClick={props.onHide}>
+                            <Card>
                             <Card.Body >
                                 <Icon icon="mdi:truck" width='72'/>
                                 <Card.Title>Driver</Card.Title>
@@ -42,7 +42,7 @@ function SignUpModal(props){
                 </Row>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={props.onHide}>Close</Button>
+                <button className={Styling.button} onClick={props.onHide}>Close</button>
             </Modal.Footer>
         </Modal>
     );

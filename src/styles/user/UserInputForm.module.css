@@ -3,22 +3,20 @@
 }
 
 .control{
-    margin-bottom: 0.5rem;
+    margin: 1rem 0;
 }
 
 .control label{
     display: block;
-    font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
 .control input,
 .control textarea{
     display: block;
-    font: inherit;
     border-radius: 4px;
     padding: 0.25rem;
-    width: 25%;
+    width: 100%;
 }
 
 .actions {
@@ -28,16 +26,48 @@
 .actions button {
     font: inherit;
     cursor: pointer;
-    background-color: #db4444;
+    background-color: #161616;
     color: white;
     padding: 0.5rem 1.5rem;
-    border: 1px solid #77002e;
+    border: 2px solid #fff;
     border-radius: 4px;
-    font-weight: bold;
+    width: 100%;
 }
   
 .actions button:hover,
 .actions button:active {
-    background-color: #a50e48;
-    border-color: #a50e48;
+    background-color: #db4444;
+    border-color: #161616;
+}
+
+.card{
+    background-color: #161616 !important;
+    padding: 2rem;
+    max-width: 400px;
+    min-width: 200px;
+    margin: auto;
+}
+
+.card2{
+    background-color: #161616 !important;
+    padding: 2rem;
+    max-width: 600px;
+    min-width: 200px;
+    margin: auto;
+}
+
+.content{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14pt;
+}
+
+.content a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.content a:hover{
+    color: #db4444;
 }

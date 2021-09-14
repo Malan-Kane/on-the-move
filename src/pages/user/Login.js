@@ -1,11 +1,11 @@
 import {useRef} from 'react';
-import styling from '../../styles/user/UserInputForm.module.css';
+
+import Card from 'react-bootstrap/Card'
+import Styling from '../../styles/user/UserInputForm.module.css';
 
 function Login(props){
     const usernameRef = useRef();
     const passwordRef = useRef();
-
-   
 
     function submit(event){
         event.preventDefault();
@@ -22,25 +22,29 @@ function Login(props){
 
     
 
-    return <div className={styling.container}>
-        <h2>Login</h2>
+    return (
+        <Card className={Styling.card}>
+            <div className={Styling.container}>
+                <h2>Login</h2>
 
-        <form onSubmit={submit}>
-            <div className={styling.control}>
-                <label htmlFor='username'>Username</label>
-                <input type='email' required id='username' ref={usernameRef}/>
-            </div>
+                <form onSubmit={submit}>
+                    <div className={Styling.control}>
+                        <label htmlFor='username'>Username</label>
+                        <input type='email' required id='username' ref={usernameRef}/>
+                    </div>
 
-            <div className={styling.control}>
-                <label htmlFor='password'>Password</label>
-                <input type='password' required id='password' ref={passwordRef}/>
-            </div>
+                    <div className={Styling.control}>
+                        <label htmlFor='password'>Password</label>
+                        <input type='password' required id='password' ref={passwordRef}/>
+                    </div>
 
-            <div className={styling.actions}>
-                <button>Login</button>
+                    <div className={Styling.actions}>
+                        <button>Login</button>
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
+        </Card>
+    );
 }
 
 export default Login;

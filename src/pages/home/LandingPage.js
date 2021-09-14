@@ -1,20 +1,14 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
-import SignUpModal from '../../components/layout/SignInModal';
 
 import Styling from '../../styles/layout/Layout.module.css';
 
-import Image1 from '../../components/images/MK1.png';
-import Button from '@restart/ui/esm/Button';
 
 function LandingPage(){
 
     return (
         <div>
-
-            
-
 
                 <Row>
                     <Col>
@@ -44,9 +38,9 @@ function LandingPage(){
                             <div className={Styling.control}>
                                 <h2>New here? Register a new account.</h2>
 
-                                <Link to='/SignUp'><h3 className={Styling.subheading}>Register as a User</h3></Link>
+                                <Link to='/signup'><h3 className={Styling.subheading}>Register as a User</h3></Link>
                                 <div className={Styling.bottomline}/>
-                                <Link to='/SignUpDriver'><h3 className={Styling.subheading}>Register as a Driver</h3></Link>
+                                <Link to='/signup-driver'><h3 className={Styling.subheading}>Register as a Driver</h3></Link>
                             </div>
                         </Container>
                     </Col>
