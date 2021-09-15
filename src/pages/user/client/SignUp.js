@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
-import {useRef} from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import {useRef, useState} from 'react';
 
-import Card from 'react-bootstrap/Card'
-import app from '../../../firebase';
+import {Card, Alert} from 'react-bootstrap'
 import Styling from '../../../styles/user/UserInputForm.module.css';
+import {useAuth} from '../../../context/AuthContext';
 
 function SignUp(props){
     const emailRef = useRef();
@@ -12,9 +12,17 @@ function SignUp(props){
     const firstNameRef = useRef();
     const lastNameRef = useRef();
     const locationRef = useRef();
+    const {signup} = useAuth();
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const history = useHistory();
 
-    function submit(event){
+    async function submit(event){
         event.preventDefault();
+
+        if (passwordRef.current.value !== confirmPasswordRef.current.value){
+            return setError('Passwords do not match.');
+        }
 
         const enteredEmail = emailRef.current.value;
         const enteredPassword = passwordRef.current.value;
@@ -29,7 +37,16 @@ function SignUp(props){
             lastName: enteredLastName,
             location: enteredLocation
         };
-        props.addSignUp(signupData);
+
+        try {
+            setError('');
+            setLoading(true);
+            await signup(signupData.email, signupData.password);
+            history.push('/client-dashboard')
+        } catch {
+            setError('Failed to create an account.');
+        }
+        setLoading(false);
     }
 
     
@@ -38,8 +55,8 @@ function SignUp(props){
         <>
             <Card className={Styling.card2}>
                 <div className={Styling.container}>
-                    <h2>Sign up</h2>
-
+                    <h3>Sign up</h3>
+                    {error && <Alert variant='danger'>{error}</Alert>}
                     <form onSubmit={submit}>
                         <div className={Styling.control}>
                             <label htmlFor='firstName'>First Name</label>
@@ -71,7 +88,7 @@ function SignUp(props){
                         </div>
 
                         <div className={Styling.actions}>
-                            <button>Sign Up</button>
+                            <button disabled={loading} type='submit'>Sign Up</button>
                         </div>
                     </form>
                 </div>

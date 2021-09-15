@@ -2,11 +2,14 @@
     text-align: center;
     color: #161616;
     text-decoration: none;
+    font-weight: normal;
+    font-size: 10pt;
+
 }
 
 .card :hover{
     color: #fff;
-    background-color: #db4444;
+    background-color: #008080;
     transition: 0.5s;
 }
 
@@ -14,8 +17,16 @@
     border: none;
     text-align: center;
     padding: 5px 20px;
-    border: 2px solid #161616;
+    border: 1.5px solid #161616;
     border-radius: 20px;
+    font-size: 10pt;
+
+}
+
+.button:hover{
+    background-color: #db4444;
+    color: #fff;
+    border: 1.5px solid #fff;
 }
 
 

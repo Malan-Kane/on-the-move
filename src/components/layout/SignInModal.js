@@ -17,10 +17,10 @@ function SignUpModal(props){
                         <Link to='/signup' className={Styling.card} onClick={props.onHide}>
                             <Card>
                             <Card.Body>
-                                <Icon icon="bi:person-fill" width='72'/>
-                                <h4>Client</h4>
+                                <Icon icon="bi:person-fill" width='68'/>
+                                <Card.Title>Client</Card.Title>
                                 <Card.Text>
-                                    Have your cargo delivered,{' '}
+                                    Have your cargo delivered.{' '}
                                 </Card.Text>
                             </Card.Body>
                             </Card>
@@ -30,7 +30,7 @@ function SignUpModal(props){
                         <Link to='/signup-driver' className={Styling.card} onClick={props.onHide}>
                             <Card>
                             <Card.Body >
-                                <Icon icon="mdi:truck" width='72'/>
+                                <Icon icon="mdi:truck" width='68'/>
                                 <Card.Title>Driver</Card.Title>
                                 <Card.Text>
                                     Become an approved driver.{' '}

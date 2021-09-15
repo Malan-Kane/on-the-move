@@ -36,7 +36,7 @@
   
 .actions button:hover,
 .actions button:active {
-    background-color: #db4444;
+    background-color: #008080;
     border-color: #161616;
 }
 
@@ -59,7 +59,6 @@
 .content{
     text-align: center;
     margin-top: 5px;
-    font-size: 14pt;
 }
 
 .content a{
@@ -69,5 +68,5 @@
 }
 
 .content a:hover{
-    color: #db4444;
+    color: #008080;
 }
