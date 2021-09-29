@@ -1,0 +1,13 @@
+.container{
+    background-color: #fff;
+    width: 75%;
+    min-width: 300px;
+    color: #161616;
+    margin: auto;
+    padding: 15px;
+    border-radius: 2px;
+}
+.heading{
+    text-align: center;
+    border-bottom: 1px solid #161616;
+}
